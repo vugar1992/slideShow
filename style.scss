@@ -7,3 +7,72 @@ html {
     padding: 0;
 }
 
+.container {
+    width: 900px;
+    margin: 0 auto;
+    
+    .wrapper {
+        background: #87CEFA;
+        margin: 5rem auto;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 3px 5px 10px;
+        padding: 20px 0 20px 0px;
+
+        .preview {
+            display: inline-block;
+            width: 500px;
+            height: 250px;
+            vertical-align: middle;
+            margin: 0 5px 0 5px;
+            overflow: hidden;
+            box-shadow: 0px 0px 7px 2px;
+            position: relative;
+
+            .fa-expand {
+                z-index: 1;
+                position: absolute;
+                right: 1px;
+                top: 1px;
+                border: 1px solid rgba(0,0,0,0);
+                padding: 7px;
+                border-radius: 18px;
+                font-size: 17px;
+                opacity: .5;
+                cursor: pointer;
+            }
+
+            &:hover > i {
+                opacity: 1;
+                border: 1px solid #000;
+            }
+
+            div {
+                position: absolute;
+                display: flex;
+                left: 0;
+                bottom: 0;
+
+                img {
+                    width: 500px;
+                    height: 250px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+button {
+    font-size: 13px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 13px;
+    background: #00BFFF;
+    cursor: pointer;
+    transition: .1s;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
