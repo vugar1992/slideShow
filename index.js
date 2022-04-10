@@ -29,7 +29,8 @@ class Animation {
             } else {
                 this.choiceStep(-1);
             }
-            this.style.end = !this.style.end
+
+            this.style.end = !this.style.end;
         }
         
     }
@@ -40,12 +41,12 @@ class Animation {
         if (step === 1) {
             this.slideBlock.classList.add('trs');
             this.style.positiont += this.width;
-            this.style.inline()
+            this.style.inline();
             this.style.index--;
         } else {
             this.slideBlock.classList.add('trs');
             this.style.positiont -= this.width;
-            this.style.inline()
+            this.style.inline();
             this.style.index++;
         }
     }
@@ -55,17 +56,17 @@ class Animation {
     trsEnd() {
         if (this.style.index === 0) {
             this.style.positiont = -this.width * this.img.length;
-            this.style.inline()
+            this.style.inline();
             this.style.index = this.img.length;
         } 
         else if (this.style.index === this.img.length + 1) {
             this.style.positiont = -this.width;
-            this.style.inline()
+            this.style.inline();
             this.style.index = 1;
         }
         
         this.slideBlock.classList.remove('trs');
-        this.style.end = !this.style.end
+        this.style.end = !this.style.end;
     }
 
 
@@ -94,8 +95,8 @@ class Animation {
         const firstSlide = this.img[0].cloneNode(true);
         const lastSlide = this.img[this.img.length - 1].cloneNode(true);
 
-        this.slideBlock.insertAdjacentElement('afterbegin', lastSlide)
-        this.slideBlock.insertAdjacentElement('beforeend', firstSlide)
+        this.slideBlock.insertAdjacentElement('afterbegin', lastSlide);
+        this.slideBlock.insertAdjacentElement('beforeend', firstSlide);
 
     }
 
