@@ -47,7 +47,11 @@ html {
                 border: 1px solid #000;
             }
 
-            div {
+            .trs {                
+                transition: .3s ease-in;
+            }
+
+            #slideBlock {
                 position: absolute;
                 display: flex;
                 left: 0;

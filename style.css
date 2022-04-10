@@ -36,12 +36,14 @@ html {
       .container .wrapper .preview:hover > i {
         opacity: 1;
         border: 1px solid #000; }
-      .container .wrapper .preview div {
+      .container .wrapper .preview .trs {
+        transition: .3s ease-in; }
+      .container .wrapper .preview #slideBlock {
         position: absolute;
         display: flex;
         left: 0;
         bottom: 0; }
-        .container .wrapper .preview div img {
+        .container .wrapper .preview #slideBlock img {
           width: 500px;
           height: 250px;
           object-fit: cover; }
